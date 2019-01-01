@@ -1,0 +1,20 @@
+Pacing: Wait time between the each iteration
+
+D= Duration of the test
+B= Baseline(total time taken by 1 vuser to complet 1 whole transaction)
+T= total amount of the think time
+I= Execption Interation
+R= Residual Time of the test window
+
+R= (d-(T+B)xI)
+
+p= pacing interval
+p=R/I
+ no. of user =(ResponseTime in Sec +Pacing in Sec)xTPS
+ 
+ 
+ 2147924789 ---shannon---
+ 
+ Pacing (in sec) = (No. of Users/TPS)-E2E response time (in sec)
+ Remaining Time = 60 minutes - ((Total transactions * Response Time) / Total Users))
+ Pacing Time = (No of Users / (TPS / No of transactions)) - (E2E Response Time + Total Think Time) 

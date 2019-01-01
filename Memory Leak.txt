@@ -1,0 +1,35 @@
+Garbage Collection:
+GC is a process of releasing the runtime unused memory automatically. in other word, it is a way to destroy the used objects.
+
+Advantage of GC:
+1. It make java memory efficient because gc removes the unused objects from heap memory
+2. It is automatically done by the gc
+
+if GC is not destroying the used objects then it will start taking more memory and response time will be reduced.
+
+Memory Leak:
+
+In java is a situation where some objects are not used by application anymore but GC failed to recognoize them as unused or unable to release them. So these objects to the application and start consuming more resources.
+
+Memory leak happen where created objects not released and new object keeps creating
+
+Cause of memory leak
+
+1. Performace: Execssive object creation and deletion, long delay in Garbage collection, excessive os page swapping and moew
+2. Resource Constraints: It's occures when their is too little memory available or your memory os too frangment to allocate a large object
+3. java heap leak: java object keep creating without being released
+4. Native memory leak: Memory utilization that is outside the java heap allocation is made by JNI, JVM, Driver, Code etc.
+5. Inappropriate sesion in web application, it is not memory leak but create a problem
+6 Release pool resources DB connect which cause DB connection release.
+
+How to Monitor
+
+Dynatrace:
+
+System Profile> Particular server> Runtime Analysis> Create a memoryDump> Open memoryDump> Click on the tab web request>Sort by the memory leak> drill down to purepath(Click on sort the response time , high respose time will come on top, on the right hand side high response time will be in pink)> drill down to method hotsopt(it will take directly on the particular action we can click on detail issue method or query)
+
+First Create a load runner script> goto the dynatrace > click on tool>load generator controller> browse the vugen script and click on path> it will add the headed in the vugen script.
+
+Dynatrace agent(Running on server)> Dynatrace collecter and Server> Dynatrace Client
+
+Server name> System Profile>Monitor> Agent Break Down> Chart(Cpu/memory/GC/High wait)>Transaction(from transaction flow also we can find error)

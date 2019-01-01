@@ -1,0 +1,10 @@
+Vuser Process: 
+When vuser run as a process the same driver program is located into memory for each user. This will take large amount of memory for each vuser and will limit the number of vuser you can run on a single generator.
+
+Ex: i want to run 10 user, each user take same amount of memory for each user, large amount of memory will be required because of that and number of vuser count will be decrease.
+
+Vuser Thread:
+When vuser run as a thread, only one instance of driver program is shared by given number of vusers. you can run more vusers on a single generators using multithreading mode.
+
+Michellenous> multithreading> Process & Thread> Recording option
+

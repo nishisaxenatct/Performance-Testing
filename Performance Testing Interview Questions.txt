@@ -1,0 +1,27 @@
+1. How to create workload model in Performance testing?
+2. What all the challenges faced during scriting script in Loadrunner
+
+3. how to call one script in another in loadrunner?
+Virtual Table Server is the mechanism to do this in LoadRunner. If you do not want to use VTS then you can use other service brokers to handle this. Solutions have been built around MYSQL, RabbitMQ, ORACLE and SQL Server Queue Tables, etc... The architecture of this solution is Virtual user A writes to a queue. Virtual user B, which you are trying to pass the data to, "pops" the next value from the queue. The service oriented architecture of the queue handles the appropriate managing of lock for push onto the queue and pop from the queue for multiple users.
+
+4. how to handle dynamic data in script if Left boundary and Right Boundary is not available
+web_reg_save_param(“DynamicCapture”, “LB=ACHP”, “RB/IC=;”, LAST);
+The corresponding place, which you expect to be dynamically filled in with a digit, should be replaced by a pound sign ( # ).
+
+*If letters are changing case*, you can modify the function as below to include the /IC flag:
+
+*web_reg_save_param(“DynamicCapture”, “LB/IC/DIG=a#b\=”, “RB/IC=rb”, LAST);*
+
+Extending the argument further, if there are multiple digits, you have to put a pound sign (#) sing for each digits
+
+Till now we were discussing about dynamic digits. If you find a case, where you expect a place to be filled in dynamically by a digit or a letter, then modify the function to use /ALNUM instead of /DIG text flag, and use caret sign(^) instead of # :
+
+web_reg_save_param(“DynamicCapture”, “LB/ALNUM=a^b\=”, “RB/IC=rb”, LAST);
+
+5. What are the other matrics we check in performance testing?
+Average response time
+Peak response time
+Error rates
+CPU utilization
+Memory utilization
+Network throughput

@@ -1,0 +1,12 @@
+Auto Correlation:
+it work on pre-defined correalation rules. the script is played back and scanned for auto correlation on failing. 
+Vugen indentify the places wherever the correalation rule works and correlate the value
+Step:
+1. Click on Record> Recording option>goto the correalation> configuration Rule
+2. Mark as checked again all application
+3. Click on new rules> action>=: All body text scan type_boundary base: lb and rb> select parameter prefix> prefix name
+4. click on option
+5. now replay the script
+6. scan script for correalation
+7. scan will do the comparision between actual and replay script
+8. click on correalation

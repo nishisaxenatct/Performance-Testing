@@ -1,0 +1,24 @@
+Web_reg_save_param_regexp("parameter="parameter name",
+                   RegExp=entityid\":(.*?),\"Enityname\";\"(.*?)\"
+				   search_filters
+				   "scope_body".
+				   "IgnoreRedirection=No;
+				   "Group=0"
+				   "Ordinal=all"
+				   last);
+
+Correlation:
+Correlation is used to handle the dynamic values in script. Dynamic values can we changed for each user action or for different value.
+in both cases correlation take care of these values and prevents them from failing the script during execution.
+Dynamic value is two type
+
+1. Static: where Left boundary and right boundary is static
+2. Dynamic: where LB and RB is also changed
+
+1. Manual correlation:
+1. Determine the value to capture
+2. find the rigt and left boundaries of the value to capture
+3. find which occurance of the text boundaries should be used
+4. Add a new step> goto the navigatore>search> Web_reg_save_param_regexp> drag where you want to add> add parameter name>RegExp>LB and RB and occurance of the function
+
+5.

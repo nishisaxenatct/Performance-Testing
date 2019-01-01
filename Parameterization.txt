@@ -1,0 +1,15 @@
+Parameterization
+
+It is used for passing different values for each user or iteration. when you record an application in loadrunner it will hard code the values but in real time scenarios we want to use different values for execution.
+
+1. Record script>Right click on the value which you want to parameterize
+
+2.Give the paramerer name> click on ok
+3. it will ask you to replcase all occurance of the string with parameterize> click yes
+4. Now Click on parameter as show in the select file and values
+
+Three type of parameterize
+1. Sequence
+2. Random 
+3. Unique
+

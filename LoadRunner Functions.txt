@@ -1,0 +1,43 @@
+VUGEN Function:
+
+Action Functions
+Click one of the following functions for more information: 
+
+web_custom_request : Allows you to create a custom HTTP request with any method supported by HTTP. 
+web_image : Emulates a mouse click on the image defined by the attributes.
+web_link : Emulates a mouse click on the link defined by the attributes.
+web_submit_data : Performs an "unconditional" or "contextless" form submission.
+web_submit_form :Emulates the submission of a form.
+web_url :Loads a specific URL.
+----------------------------------------------------------------------------------------------------------
+Check Functions
+The following functions may be used in a Web script. VuGen does not record these functions. You must either manually program them into the script, or use the VuGen user interface to generate the functions. Click one of the following functions for more information: 
+
+web_image_check :Verifies the presence of a specified image inside an HTML page.
+web_find : Searches inside an HTML page for a specified text string.
+web_reg_find :Registers a search for a text string for the next Action function.
+----------------------------------------------------------------------------------------------------------
+Check Functions
+The following functions may be used in a Web script. VuGen does not record these functions. You must either manually program them into the script, or use the VuGen user interface to generate the functions. Click one of the following functions for more information: 
+
+web_image_check : Verifies the presence of a specified image inside an HTML page.
+web_find : Searches inside an HTML page for a specified text string.
+web_reg_find :Registers a search for a text string for the next Action function.
+---------------------------------------------------------------------------------------------------------
+Correlation Functions for Java
+Click one of the following functions for more information:
+
+web_create_html_param :Saves dynamic information on an HTML page to a parameter. (LR 6.5 and below)
+web_set_max_html_param_len :Sets the maximum length of retrieved dynamic HTML information.
+web_reg_save_param : Saves non-NULL terminated dynamic data from an HTML page to a parameter.
+web_revert_auto_header :Stops scripts from adding a specific header to subsequent HTTP requests.
+------------------------------------------------------------------
+Add Transaction
+
+lr_start_transaction-- it will give you the duration
+lr_end_transaction---
+
+ lr_abort function--To use to stop the script in LoadRunner w
+ 
+lr_eval_string :function returns the input string after evaluating any embedded parameters. If the string argument contains only a parameter, the function returns the current value of the parameter. Embedded parameters must be in brackets. Note: lr_eval_string allocates memory internally.
+
